@@ -225,7 +225,9 @@ bool KCompletionBox::eventFilter(QObject *o, QEvent *e)
                     ev->accept();
                     return true;
                 }
+#if QT_VERSION >= 0x050800
                 Q_FALLTHROUGH();
+#endif
             default:
                 break;
             }
